@@ -57,3 +57,13 @@ exports.add = (req, res) => {
 
 module.exports.livres = livres;
 
+exports.detail = (req, res) => {
+  const livre = {
+    id: req.params.id,
+    titre: "Harry Potter",
+    auteur: "J.K. Rowling",
+    annee: 2001
+  };
+
+  res.render("detail", { livre });
+};

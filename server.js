@@ -33,3 +33,18 @@ app.post("/livres/:id/avis", avisController.add);
 app.listen(3000, () => {
   console.log("Serveur lancé sur http://localhost:3000");
 });
+
+app.use((req, res) => {
+  res.status(404).render("404");
+});
+
+app.get("/livres/recherche", (req, res) => {
+  const q = req.query.q;
+
+  res.send("Recherche pour : " + q);
+});
+app.post("/livres/:id/supprimer", (req, res) => {
+  const id = req.params.id;
+
+  res.send("Livre supprimé : " + id);
+});

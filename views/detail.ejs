@@ -1,0 +1,49 @@
+<h1><%= livre.titre %></h1>
+
+<p>Auteur : <%= livre.auteur %></p>
+<p>Année : <%= livre.annee %></p>
+<p>Résumé : <%= livre.resume %></p>
+
+<h3>Avis</h3>
+<ul>
+  <% livre.avis.forEach(a => { %>
+    <li><%= a %></li>
+  <% }) %>
+</ul>
+
+<a href="/livres/<%= livre.id %>/avis">Ajouter un avis</a>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Détail livre</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <h1><%= livre.titre %></h1>
+
+  <p><strong>Auteur :</strong> <%= livre.auteur %></p>
+  <p><strong>Année :</strong> <%= livre.annee %></p>
+  <p><strong>Résumé :</strong> <%= livre.resume %></p>
+
+  <h3>💬 Avis</h3>
+
+  <ul>
+    <% livre.avis.forEach(a => { %>
+      <li><%= a %></li>
+    <% }) %>
+  </ul>
+
+  <a href="/livres/<%= livre.id %>/avis">
+    <button>Ajouter un avis</button>
+  </a>
+
+  <br><br>
+
+  <a href="/livres">
+    <button>Retour</button>
+  </a>
+
+</body>
+</html>

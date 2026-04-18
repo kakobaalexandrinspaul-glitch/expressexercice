@@ -1,0 +1,25 @@
+{
+  "name": "expressexercice",
+  "version": "1.0.0",
+  "description": "Tu viens d'apprendre les bases de NodeJs. Il est maintenant temps de mettre en pratique en construisant une application web complète par toi-même.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kakobaalexandrinspaul-glitch/expressexercice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/kakobaalexandrinspaul-glitch/expressexercice/issues"
+  },
+  "homepage": "https://github.com/kakobaalexandrinspaul-glitch/expressexercice#readme",
+  "dependencies": {
+    "ejs": "^5.0.2",
+    "express": "^5.2.1"
+  }
+}

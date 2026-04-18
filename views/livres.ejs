@@ -1,0 +1,39 @@
+<h1>Liste des livres</h1>
+
+<ul>
+  <% livres.forEach(livre => { %>
+    <li>
+      <%= livre.titre %> - <%= livre.auteur %>
+      <a href="/livres/<%= livre.id %>">Voir détail</a>
+    </li>
+  <% }) %>
+</ul>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Liste des livres</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <h1>📖 Liste des livres</h1>
+
+  <% livres.forEach(livre => { %>
+    <div class="card">
+      <h3><%= livre.titre %></h3>
+      <p>Auteur : <%= livre.auteur %></p>
+
+      <a href="/livres/<%= livre.id %>">
+        <button>Détails</button>
+      </a>
+    </div>
+  <% }) %>
+
+  <a href="/">
+    <button>Retour accueil</button>
+  </a>
+
+</body>
+</html>
